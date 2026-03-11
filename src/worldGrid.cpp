@@ -8,7 +8,7 @@ WorldGrid::WorldGrid(int r, int c, Texture2D *defaultTexture) : rows(r), cols(c)
     {
         for (int j = 0; j < cols; ++j)
         {
-            grid[i][j] = new Tile(TileType::Air, texture); // Default to Air tile with default texture
+            grid[i][j] = new Tile(TileType::Air, texture);
         }
     }
 }
@@ -30,7 +30,7 @@ void WorldGrid::setTileAt(Vec2 pos, TileType type)
     int y = static_cast<int>(pos.y);
     if (x >= 0 && x < cols && y >= 0 && y < rows)
     {
-        delete grid[y][x]; // Free existing tile memory
+        delete grid[y][x]; 
         grid[y][x] = new Tile(type, texture);
     }
 }
