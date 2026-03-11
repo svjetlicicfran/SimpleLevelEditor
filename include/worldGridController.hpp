@@ -2,7 +2,7 @@
 #include <raylib.h>
 #include "const.hpp"
 #include "vec2.hpp"
-class BlockPickerMenu; // Forward declaration
+class BlockPickerMenu;
 
 #include "tile.hpp"
 #include "worldGrid.hpp"
@@ -13,7 +13,7 @@ class WorldController
 
 private:
     TileType selectedTileType;
-    WorldGrid *worldGrid; // Pointer to the WorldGrid instance
+    WorldGrid *worldGrid;
 
     Vec2 getClickedTile(const Camera2D &camera) const;
 
@@ -22,7 +22,7 @@ public:
 
     const WorldGrid *getWorldGrid() const;
 
-    void update(const Camera2D &camera, BlockPickerMenu &menu); // Handle input and update world state
+    void update(const Camera2D &camera, BlockPickerMenu &menu);
 
     void setSelectedTileType(TileType type);
 
