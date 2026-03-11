@@ -16,7 +16,7 @@ BlockPickerMenu::BlockPickerMenu(WorldController *controller, Texture2D *tex, co
 
 void BlockPickerMenu::drawMenu() const
 {
-    DrawRectangleRec(menuRect, (Color){50, 64, 99, 255}); // Semi-transparent background
+    DrawRectangleRec(menuRect, (Color){50, 64, 99, 255});
 
     for (const auto &menuTile : menuTiles)
     {
