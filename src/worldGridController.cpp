@@ -24,10 +24,10 @@ void WorldController::update(const Camera2D &camera, BlockPickerMenu &menu)
     if (tilePos.x < 0 || tilePos.y < 0 ||
         tilePos.x >= Constants::worldCols || tilePos.y >= Constants::worldRows)
     {
-        return; // Out of bounds
+        return; 
     }
 
-    // Only handle grid input if mouse is NOT over menu
+    
     if (!menu.isMouseOverMenu())
     {
         if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
@@ -45,9 +45,6 @@ void WorldController::update(const Camera2D &camera, BlockPickerMenu &menu)
     }
     else
     {
-        // Optionally, you can provide visual feedback when the mouse is over the menu
-        // For example, change cursor or highlight menu area
-
         // menu.handleInput(GetMousePosition());
     }
 }
@@ -64,7 +61,7 @@ void WorldController::eraseTileAt(const Vec2 &worldPos)
 {
     if (worldGrid)
     {
-        worldGrid->setTileAt(worldPos, TileType::Air); // Assuming Air represents an empty tile
+        worldGrid->setTileAt(worldPos, TileType::Air);
     }
 }
 
